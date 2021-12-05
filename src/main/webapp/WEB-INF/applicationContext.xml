@@ -13,5 +13,4 @@
     <context:component-scan base-package="net.yesdata"></context:component-scan>
 
     <util:properties id="APP_PROP" location="classpath:application.properties" local-override="true"/>
-
 </beans>

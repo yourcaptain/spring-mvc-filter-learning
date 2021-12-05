@@ -18,7 +18,7 @@ public class MyFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        System.out.println("======= " + testValue + " =======");
+        System.out.println("======= FILTER: " + testValue + " =======" + Thread.currentThread().getName());
 
         filterChain.doFilter(servletRequest, servletResponse);
     }

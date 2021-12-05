@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/c")
 public class TestController {
     @Value("test.value")
     private String testValue;
@@ -14,7 +14,21 @@ public class TestController {
     @RequestMapping("/test")
     @ResponseBody
     public String test(){
-        System.out.println("response: " + testValue);
+        System.out.println("/test: " + testValue + " -- " + Thread.currentThread().getName());
+        return testValue;
+    }
+
+    @RequestMapping("/mvc")
+    @ResponseBody
+    public String mvc(){
+        System.out.println("/mvc " + Thread.currentThread().getName());
+        return testValue;
+    }
+
+    @RequestMapping("/")
+    @ResponseBody
+    public String root(){
+        System.out.println("/ " + Thread.currentThread().getName());
         return testValue;
     }
 }
