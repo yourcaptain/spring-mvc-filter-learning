@@ -8,7 +8,7 @@ import java.io.IOException;
 
 @Component
 public class MyFilter implements Filter {
-    @Value("test.value")
+    @Value("${test.value}")
     private String testValue;
 
     @Override

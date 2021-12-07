@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@RequestMapping("/c")
+@RequestMapping("/mvc")
 public class TestController {
-    @Value("test.value")
+    @Value("${test.value}")
     private String testValue;
 
     @RequestMapping("/test")
@@ -18,12 +18,6 @@ public class TestController {
         return testValue;
     }
 
-    @RequestMapping("/mvc")
-    @ResponseBody
-    public String mvc(){
-        System.out.println("/mvc " + Thread.currentThread().getName());
-        return testValue;
-    }
 
     @RequestMapping("/")
     @ResponseBody

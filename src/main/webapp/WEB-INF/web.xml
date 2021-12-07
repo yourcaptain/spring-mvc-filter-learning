@@ -15,28 +15,7 @@
 
   <servlet-mapping>
     <servlet-name>dispatcher</servlet-name>
-    <url-pattern>/c/*</url-pattern>
+    <url-pattern>/*</url-pattern>
   </servlet-mapping>
-
-  <!--<servlet>-->
-    <!--<servlet-name>a</servlet-name>-->
-    <!--<servlet-class>net.yesdata.AServlet</servlet-class>-->
-  <!--</servlet>-->
-
-  <!--<servlet-mapping>-->
-    <!--<servlet-name>a</servlet-name>-->
-    <!--<url-pattern>/a/*</url-pattern>-->
-  <!--</servlet-mapping>-->
-
-  <!--<servlet>-->
-    <!--<servlet-name>b</servlet-name>-->
-    <!--<servlet-class>net.yesdata.BServlet</servlet-class>-->
-  <!--</servlet>-->
-
-  <!--<servlet-mapping>-->
-    <!--<servlet-name>b</servlet-name>-->
-    <!--<url-pattern>/b/*</url-pattern>-->
-  <!--</servlet-mapping>-->
-
 
 </web-app>
